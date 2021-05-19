@@ -2,4 +2,4 @@
 vendor
 cache/compiled
 assets/build
-
+/node_modules
