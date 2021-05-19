@@ -1,0 +1,177 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "c90ff22d0d0062296c5cbd77cf017fc7",
+    "packages": [
+        {
+            "name": "fenom/fenom",
+            "version": "2.12.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fenom-template/fenom.git",
+                "reference": "f0cb251843de469b453b15c158cf0d1589d4de6d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fenom-template/fenom/zipball/f0cb251843de469b453b15c158cf0d1589d4de6d",
+                "reference": "f0cb251843de469b453b15c158cf0d1589d4de6d",
+                "shasum": ""
+            },
+            "require": {
+                "ext-tokenizer": "*",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "<6.0",
+                "satooshi/php-coveralls": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Fenom\\": "src/"
+                },
+                "classmap": [
+                    "src/Fenom.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3"
+            ],
+            "authors": [
+                {
+                    "name": "Ivan Shalganov",
+                    "email": "a.cobest@gmail.com"
+                }
+            ],
+            "description": "Fenom - excellent template engine for PHP",
+            "keywords": [
+                "fenom",
+                "template",
+                "templater",
+                "templating"
+            ],
+            "time": "2020-07-06T17:02:31+00:00"
+        },
+        {
+            "name": "fresh/transliteration",
+            "version": "v2.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fre5h/transliteration.git",
+                "reference": "799fa9726d4dce97f4f332f1db23bdcc8b550134"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fre5h/transliteration/zipball/799fa9726d4dce97f4f332f1db23bdcc8b550134",
+                "reference": "799fa9726d4dce97f4f332f1db23bdcc8b550134",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.15",
+                "johnkary/phpunit-speedtrap": "^3.1",
+                "phpstan/phpstan": "^0.11",
+                "phpstan/phpstan-phpunit": "^0.11",
+                "phpunit/phpunit": "~7.5",
+                "slam/phpstan-extensions": "^3.4",
+                "squizlabs/php_codesniffer": "~3.1",
+                "thecodingmachine/phpstan-strict-rules": "^0.11"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Fresh\\Transliteration\\": "src/"
+                },
+                "exclude-from-classmap": [
+                    "/tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Artem Henvald",
+                    "email": "genvaldartem@gmail.com",
+                    "role": "Creator"
+                }
+            ],
+            "description": "PHP library for transliteration.",
+            "homepage": "https://github.com/fre5h/transliteration",
+            "keywords": [
+                "english",
+                "russian",
+                "transliterate",
+                "transliteration",
+                "ukrainian"
+            ],
+            "time": "2019-12-03T10:56:00+00:00"
+        },
+        {
+            "name": "gambitph/titan-framework",
+            "version": "1.12.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/gambitph/Titan-Framework.git",
+                "reference": "e83f3dd73e914d17ca7ee24dbe0cccc123d482fc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/gambitph/Titan-Framework/zipball/e83f3dd73e914d17ca7ee24dbe0cccc123d482fc",
+                "reference": "e83f3dd73e914d17ca7ee24dbe0cccc123d482fc",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "titan-framework.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPLv2+"
+            ],
+            "authors": [
+                {
+                    "name": "Gambit Technologies",
+                    "email": "info@gambit.ph",
+                    "homepage": "http://www.titanframework.net/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Titan Framework allows theme and plugin developers to create admin pages, options, meta boxes, and theme customizer options with just a few simple lines of code.",
+            "homepage": "https://github.com/gambitph/Titan-Framework",
+            "keywords": [
+                "Titan Framework",
+                "framework",
+                "options",
+                "titan",
+                "wordpress"
+            ],
+            "time": "2018-07-03T03:26:39+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "ext-json": "*"
+    },
+    "platform-dev": [],
+    "plugin-api-version": "1.1.0"
+}

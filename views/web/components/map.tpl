@@ -1,0 +1,1 @@
+<div class="map-route-canvas" style="width: {$settings.mapWidth}px; height: {$settings.mapHeight}px"></div>

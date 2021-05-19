@@ -1,0 +1,21 @@
+{
+    "name": "fpbeat/wp-poi-map",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Roman Zhakhov",
+            "email": "beat@mail.ua"
+        }
+    ],
+    "require": {
+        "ext-json": "*",
+        "fenom/fenom": "^2.12",
+        "gambitph/titan-framework": "^1.12.1",
+        "fresh/transliteration": "^2.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "WpPoiMap\\": "app/"
+        }
+    }
+}

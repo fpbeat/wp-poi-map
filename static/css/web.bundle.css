@@ -1,0 +1,66 @@
+.wp-poi-map-container .wp-poi-map__filter {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 20px 20px 20px;
+}
+.wp-poi-map-container .wp-poi-map__filter > div input {
+  margin-right: 5px;
+}
+.wp-poi-map-container .wp-poi-map__filter > div label {
+  cursor: pointer;
+}
+.wp-poi-map-container .wp-poi-map__canvas {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  border: 1px solid #e8e8e8;
+}
+.wp-poi-map-container .wp-poi-map__canvas > span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 14px;
+  color: #878787;
+}
+.wp-poi-map-container .wp-poi-map__canvas .wp-poi-map__loading {
+  background-color: #FFF;
+  margin: 9px;
+  line-height: 36px;
+  padding: 0 12px;
+  position: absolute;
+  user-select: none;
+  border-radius: 2px;
+  height: 36px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 1px 4px -1px;
+  top: 0;
+  left: 0;
+  z-index: 1001;
+}
+.wp-poi-map-container .wp-poi-map__canvas .wp-poi-map__loading.wp-poi-map__loading-error {
+  color: #e80000;
+}
+.wp-poi-map-container .wp-poi-map__popup {
+  font-family: Ubuntu, roboto, Arial, sans-serif;
+  font-size: 14px;
+}
+.wp-poi-map-container .wp-poi-map__popup img {
+  float: left;
+  width: 200px;
+}
+.wp-poi-map-container .wp-poi-map__popup > div {
+  float: left;
+  margin-left: 10px;
+}
+.wp-poi-map-container .wp-poi-map__popup > div h1 {
+  margin: 0;
+  font-size: 18px;
+  padding-bottom: 10px;
+}
+.wp-poi-map-container .wp-poi-map__popup > div a {
+  display: inline-block;
+  margin-top: 15px;
+}
+.wp-poi-map-container .wp-poi-map__popup > div p {
+  margin: 0 0 4px 0;
+}

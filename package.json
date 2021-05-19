@@ -1,0 +1,34 @@
+{
+  "name": "taurus-carfax",
+  "version": "1.0.1",
+  "scripts": {
+    "admin": "rollup -c rollup.admin.config.js",
+    "web": "rollup -c rollup.web.config.js",
+    "prod": "rollup -c --environment prod"
+  },
+  "author": "Roman Zhakhov <fpbeat@gmail.com>",
+  "license": "MIT",
+  "main": "app.js",
+  "copyright": "Roman Zhakhov",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "core-js": "^3.6",
+    "extend": "^3.0.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9",
+    "@babel/plugin-proposal-class-properties": "^7.5",
+    "@babel/plugin-syntax-dynamic-import": "^7.8",
+    "@babel/preset-env": "^7.9",
+    "@rollup/plugin-alias": "^3.1",
+    "@rollup/plugin-babel": "^5.0",
+    "@rollup/plugin-commonjs": "^11.0",
+    "@rollup/plugin-node-resolve": "^7.1",
+    "@rollup/plugin-replace": "^2.3.2",
+    "less-plugin-clean-css": "^1.5.1",
+    "less-plugin-inline-svg": "^2.0.1",
+    "rollup-plugin-less": "^1.1.2",
+    "rollup-plugin-node-polyfills": "^0.2.1",
+    "rollup-plugin-uglify": "^6.0"
+  }
+}

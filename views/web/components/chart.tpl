@@ -1,0 +1,1 @@
+<div class="map-route-chart" style="width: {$settings.chartWidth}px; height: {$settings.chartHeight}px"></div>
