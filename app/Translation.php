@@ -70,6 +70,9 @@ class Translation
         }
     }
 
+    /**
+     * @return void
+     */
     public function register()
     {
         $translations = (WP_POI_MAP_DEBUG ? $this->discover() : ($this->readCache() ?? $this->discover()));

@@ -60,6 +60,9 @@ class Service
         register_activation_hook(Registry::instance()['file'], [$this, 'install']);
     }
 
+    /**
+     * @return void
+     */
     public function init()
     {
         try {

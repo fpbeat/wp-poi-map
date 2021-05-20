@@ -6,9 +6,19 @@ use WpPoiMap\Registry;
 
 class Processor {
 
+    /**
+     * @var null
+     */
     private static $instance = NULL;
+
+    /**
+     * @var string
+     */
     private $metaFieldKey;
 
+    /**
+     * @return Processor
+     */
     public static function instance() {
         if (is_null(self::$instance)) {
             self::$instance = new self;
@@ -17,11 +27,18 @@ class Processor {
         return self::$instance;
     }
 
+    /**
+     * Processor constructor.
+     */
     public function __construct() {
         $this->metaFieldKey = sprintf('%s_data', Registry::instance()['token']);
     }
 
-    public function save($postID, $post) {
+    /**
+     * @param int $postID
+     * @param \WP_Post $post
+     */
+    public function save($postID, \WP_Post $post) {
         if ($post->post_status === 'publish' && has_shortcode($post->post_content, Registry::instance()['shortcode'])) {
             $data = $this->getPostShortcodes($post);
             update_post_meta($postID, $this->metaFieldKey, $this->process($data));
@@ -30,6 +47,10 @@ class Processor {
         }
     }
 
+    /**
+     * @param \WP_Post $post
+     * @return array
+     */
     public function getPostShortcodes(\WP_Post $post) {
         $pattern = get_shortcode_regex([Registry::instance()['shortcode']]);
         preg_match_all("/$pattern/", $post->post_content, $matches, PREG_SET_ORDER);
@@ -44,7 +65,11 @@ class Processor {
         return array_intersect_key($pool, $urlColumn);
     }
 
-    public function getTagAttributes($shortcode) {
+    /**
+     * @param array $shortcode
+     * @return array
+     */
+    public function getTagAttributes(array $shortcode) {
         $params = shortcode_parse_atts($shortcode[3]);
 
         $pool = [];
@@ -62,7 +87,11 @@ class Processor {
         return $pool;
     }
 
-    private function process($sections) {
+    /**
+     * @param array $sections
+     * @return array
+     */
+    private function process(array $sections) {
         $pool = [];
         foreach ($sections as $section) {
             try {
@@ -78,6 +107,11 @@ class Processor {
         return $pool;
     }
 
+    /**
+     * @param string $url
+     * @return mixed
+     * @throws \Exception
+     */
     private function downloadFile($url) {
         $response = wp_remote_request($url, [
             'timeout' => 10

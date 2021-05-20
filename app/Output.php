@@ -67,11 +67,18 @@ class Output
         return self::$instance;
     }
 
+    /**
+     * @param array $object
+     * @return string
+     */
     private function formatTemplate(array $object)
     {
         return $this->template->render(Arr::extract($object, ['name', 'address', 'phone', 'email', 'website', 'image', 'permalink']));
     }
 
+    /**
+     * @return void
+     */
     public function data()
     {
         if (wp_verify_nonce($_POST['nonce'], Registry::instance()['token'])) {
@@ -88,6 +95,10 @@ class Output
         wp_die(NULL, NULL, 500);
     }
 
+    /**
+     * @param array $attributes
+     * @return string
+     */
     public function render($attributes = [])
     {
         $allAttributes = shortcode_atts($this->settings->getOptions(['map-api-key', 'map-center', 'map-zoom', 'map-type', 'map-behavior']), $attributes);
